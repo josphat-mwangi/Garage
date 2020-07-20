@@ -1,0 +1,5 @@
+- Database name is : garage
+- If unable to connect edit the config.py file and input your own database user name and password
+- Database currently has users table with username email and password hass columns
+- Register /Login and Logout functionality works perfectly
+- I have placed a placeholder welcome message on the homepage

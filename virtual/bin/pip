@@ -1,4 +1,4 @@
-#!/home/josphat/Garage-locator/virtual/bin/python
+#!/home/george/Documents/moringa-core/flask/Garage_locator/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>{{welcome_message}}</h1>
+        </div>
+        <div class="col-md-6">
+            {% if current_user.is_authenticated %}
+            <li style="list-style-type: none;"><a  href="{{current_user.username}}">UserProfile: {{current_user.username}}</a></li>
+            <li style="list-style-type: none;"><a class="btn btn-primary" role="button" href="{{url_for('auth.logout')}}">Sign out</a></li>
+            {% else %}
+            <li style="list-style-type: none;"><a class="btn btn-primary" role="button"href="{{url_for('auth.login')}}">Sign in</a></li>
+            {%endif%}
+    </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
