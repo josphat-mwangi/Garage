@@ -1,7 +1,7 @@
 from flask import render_template
-from views import views
+from . import main
 
-@views.errorhandler(404)
+@main.errorhandler(404)
 def four_Ow_four(error):
 
     return render_template('fourowfour.html'),404
