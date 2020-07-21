@@ -34,3 +34,10 @@ class User(UserMixin,db.Model):
     
     def __repr__(self):
         return f'User{self.username}'
+
+
+class Comment(db.Model):
+    id = db.Column(db.Integer,primary_key=True)
+    text = db.Column(db.string(2000))
+    author = db.Column(db.string(32))
+    timestamp = db.column(db.DateTime(), defualt=datetime.utcnow,index=True)
