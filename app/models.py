@@ -18,6 +18,7 @@ class User(UserMixin,db.Model):
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True)
     password_hash = db.Column(db.String(255))
+    comments = db.relationship('Comment', backref='user', lazy="dynamic")
 
     @property
 
@@ -37,7 +38,19 @@ class User(UserMixin,db.Model):
 
 
 class Comment(db.Model):
+    __tablename__= 'comment'
+
     id = db.Column(db.Integer,primary_key=True)
     text = db.Column(db.string(2000))
-    author = db.Column(db.string(32))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     timestamp = db.column(db.DateTime(), defualt=datetime.utcnow,index=True)
+    path = db.Column(db.Text, index=True)
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comments(cls, )
+    comments = Comment.query.filter_by()
+    return comments
