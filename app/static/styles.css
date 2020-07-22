@@ -1,0 +1,11 @@
+.RegistrationForm {
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: antiquewhite;
+    font-weight: bolder;
+  }
+.LoginForm {
+    border: none;
+    border-bottom: 2px skyblue;
+    background-color: snow;
+}  
