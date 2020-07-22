@@ -2,6 +2,10 @@
     border: none;
     border-bottom: 2px solid red;
     background-color: antiquewhite;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
   }
+.LoginForm {
+    border: none;
+    border-bottom: 2px skyblue;
+    background-color: snow;
+}  
