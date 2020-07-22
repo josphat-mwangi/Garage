@@ -52,6 +52,4 @@ class Comment(db.Model):
         db.session.commit()
 
     @classmethod
-    # def get_comments(cls,
-    # comments = Comment.query.filter_by()
-    # return comments
+   
