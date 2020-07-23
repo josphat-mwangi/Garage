@@ -34,10 +34,11 @@ Creating virtual environment and installing the dependancy
 sudo pip3 install virtualenv
 
 virtualenv venv
-Github Cloning:
 
+Github Cloning:
 https://github.com/josphat-mwangi/Garage_locator
-Gunicorn installation
+
+***Gunicorn installation***
 
 $ python3 -m pip install gunicorn
 
