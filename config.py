@@ -8,7 +8,7 @@ class Config:
     
 
 class ProdConfig(Config):
-    pass
+    DEBUG=True
 
 
 class DevConfig(Config):

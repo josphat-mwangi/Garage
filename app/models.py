@@ -42,9 +42,9 @@ class Comment(db.Model):
     __tablename__= 'comment'
 
     id = db.Column(db.Integer,primary_key=True)
-    text = db.Column(db.string(2000))
+    text = db.Column(db.String(2000))
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-    timestamp = db.column(db.DateTime(), defualt=datetime.utcnow,index=True)
+    timestamp = db.column(db.DateTime())
     path = db.Column(db.Text, index=True)
 
     def save(self):
@@ -52,4 +52,8 @@ class Comment(db.Model):
         db.session.commit()
 
     @classmethod
+    def get_comments(cls):
+        comments = Comment.query.filter_by().all()
+        return comments
+
    
