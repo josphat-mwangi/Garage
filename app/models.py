@@ -18,6 +18,8 @@ class User(UserMixin,db.Model):
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),unique = True,index = True)
     password_hash = db.Column(db.String(255))
+    bio = db.Column(db.String(255))
+    comments = db.relationship('Comment', backref='user', lazy="dynamic")
 
     @property
 
@@ -34,3 +36,24 @@ class User(UserMixin,db.Model):
     
     def __repr__(self):
         return f'User{self.username}'
+
+
+class Comment(db.Model):
+    __tablename__= 'comment'
+
+    id = db.Column(db.Integer,primary_key=True)
+    text = db.Column(db.String(2000))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    timestamp = db.column(db.DateTime())
+    path = db.Column(db.Text, index=True)
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comments(cls):
+        comments = Comment.query.filter_by().all()
+        return comments
+
+   

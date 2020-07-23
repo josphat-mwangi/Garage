@@ -4,11 +4,11 @@ import os
 class Config:
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://george:george@localhost/garage'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://josphat:nevergiveup@localhost/garage'
     
 
 class ProdConfig(Config):
-    pass
+    DEBUG=True
 
 
 class DevConfig(Config):
