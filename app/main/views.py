@@ -11,7 +11,7 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    welcome_message = 'Welcome to the Home!'
+    welcome_message = 'Welcome to Home!'
 
     return render_template('index.html', welcome_message = welcome_message )
 

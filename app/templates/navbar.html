@@ -1,9 +1,132 @@
-<div class="dropdown">
-    <button class="dropbtn">Home</button>
-    <div class="dropdown-content">
-      <a href="#garage-locator">garage-locator</a>
-      <a href="about.html">About</a>
-      <a href="#sign in">sign-in</a>
+<nav class="navbar navbar-light" style="background-color: #adaaa8; position: sticky; top:0; z-index: 1;">
+    <!-- Navbar content -->
+</nav>
+<!----sighn in-->
+<div class="container-fluid " style="width:100%; font-size: medium;">
+    <div class="row ">
+        <div class="col-md-6 " style="margin: 0px; padding: 0px; align-items: center; line-height: 0px;">
+            <h1>{{welcome_message}}</h1>
+        </div>
+        <div class="col-md-6 ">
+            {% if current_user.is_authenticated %}
+            <li style="list-style-type: none; "><a href="{{current_user.username}} ">UserProfile: {{current_user.username}}</a></li>
+            <li style="list-style-type: none; "><a class="btn btn-primary " role="button " href="{{url_for( 'auth.logout')}} ">Sign out</a></li>
+            {% else %}
+            <li style="list-style-type: none; "><a class="btn btn-primary " role="button " href="{{url_for( 'auth.login')}} ">Sign in</a></li>
+            {%endif%}
+            </ul>
+        </div>
     </div>
-  </div>
-  
+    <!---end of sign in--->
+
+    <!-- Card deck -->
+    <div class="card-deck ">
+
+        <!-- Card -->
+        <div class="card mb-4 ">
+
+            <!--Card image-->
+            <div class="view overlay ">
+                <img class="card-img-top " src="https://img.freepik.com/free-photo/asian-car-mechanic-is-removing-wheel-checking-brakes-suspension-car-service-with-forklift-repair-maintenance-center_140555-315.jpg?size=626&ext=jpg&ga=GA1.2.1426346128.1593907200 " alt="Card image cap ">
+                <a href="#! ">
+                    <div class="mask rgba-white-slight "></div>
+                </a>
+            </div>
+
+            <!--Card content-->
+            <div class="card-body ">
+
+                <!--Title-->
+                <h4 class="card-title ">About Us</h4>
+                <!--Text-->
+                <p class="card-text ">we coordinate with clients to find the closest garage for quick service. We also give clients the will to choose their desired garage choice.
+                </p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button " class="btn btn-light-blue btn-md ">Read more</button>
+
+            </div>
+
+        </div>
+        <!-- Card -->
+
+        <!-- Card -->
+        <div class="card mb-4 ">
+
+            <!--Card image-->
+            <div class="view overlay ">
+                <img class="card-img-top " src=" https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAAMD_ZBDUA-lWnWp_AA9yDSUfe7wt2yYzoQ&usqp=CAU " alt="Card image cap ">
+                <a href="#! ">
+                    <div class="mask rgba-white-slight "></div>
+                </a>
+            </div>
+
+            <!--Card content-->
+            <div class="card-body ">
+
+                <!--Title-->
+                <h4 class="card-title ">Our Garages</h4>
+                <!--Text-->
+                <p class="card-text ">We Show case the best Garages in town. which our users have selected themselves through rating.
+                </p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button " class="btn btn-light-blue btn-md ">Read more</button>
+
+            </div>
+
+        </div>
+        <!-- Card -->
+
+        <!-- Card -->
+        <div class="card mb-4 ">
+
+            <!--Card image-->
+            <div class="view overlay ">
+                <img class="card-img-top " src="https://image.freepik.com/free-photo/car-mechanic-worker-repairing-suspension-lifted-automobile-auto-repair-garage-shop-station_150455-28.jpg " alt="Card image cap ">
+                <a href="#! ">
+                    <div class="mask rgba-white-slight "></div>
+                </a>
+            </div>
+
+            <!--Card content-->
+            <div class="card-body ">
+
+                <!--Title-->
+                <h4 class="card-title "></h4>Trusted Employees
+                <!--Text-->
+                <p class="card-text ">We offer people who will get the job done just with a locator. Locate Get in touch ....
+                </p>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button " class="btn btn-light-blue btn-md ">Read more</button>
+
+            </div>
+
+        </div>
+        <!-- Card -->
+
+    </div>
+
+    <div class="col-md-4 ">
+        <div class="mapouter ">
+            <div class="gmap_canvas ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8171118.37316406!2d33.399422411573184!3d0.15408209562828926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182780d08350900f%3A0x403b0eb0a1976dd9!2sKenya!5e0!3m2!1sen!2ske!4v1595558190422!5m2!1sen!2ske"
+                    width="1490" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 350px;
+                    width: 1490px;
+                }
+                
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none!important;
+                    height: 350px;
+                    width: 1490px;
+                }
+            </style>
+        </div>
+    </div>
+</div>
+<!-- footer -->
