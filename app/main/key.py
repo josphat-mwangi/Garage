@@ -1,1 +1,1 @@
-key = "AIzaSyCS9g7mOfMD_ZoewnHUdDJmBlNzCS5sUb8"
+key = <Your Google MAPS API KEY>
